@@ -1,0 +1,483 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* CABECERA */
+/* Estilos base (para pantallas grandes como PC) */
+header {
+    color: rgb(1, 1, 160); 
+    background-color: white; 
+    padding: 10px 0; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    width: 90%; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.TituloCabecera {
+    color: rgb(253, 177, 36); 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 25px;
+    text-align: left;
+    margin: 0;
+    flex-grow: 1;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-grow: 2;
+}
+
+li {
+    margin-left: 8%;
+}
+
+li a {
+    text-decoration: none;
+    color: rgb(1, 1, 160); 
+    font-size: 21px;
+}
+
+li a:hover {
+    color: rgb(253, 177, 36); 
+}
+
+/* Estilos para pantallas móviles */
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        grid-gap: 10px; /* Espacio entre los elementos */
+        align-items: center; /* Alinea el contenido en el centro */
+    }
+
+    .TituloCabecera {
+        font-size: 20px; /* Reduce el tamaño del título */
+        text-align: center; /* Centra el título */
+        grid-column: span 2; /* El título ocupa las dos columnas */
+        margin-bottom: 15px; /* Agrega espacio debajo del título */
+    }
+
+    ul {
+        list-style: none;
+        display: contents; /* Para que los elementos del ul no afecten el grid */
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        text-align: center;
+        margin: 0;
+    }
+
+    li a {
+        font-size: 18px; /* Ajusta el tamaño de fuente para móviles */
+    }
+}
+
+
+
+/* PAGINA PRINCIPAL */
+.mensajeInicio {
+    padding-top: 10%;
+    padding-left: 4%;
+    color: white;
+    font-size: 50px;
+    text-align: left; 
+}
+.inicio {
+    background-image: url('../img/inicioPlaya.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+}
+
+#ofertasInicio {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-color: rgb(255, 6, 6);
+}   
+.mensajeOfertas {
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: red;
+}   
+.imagenesOfertas {
+    background-color: white;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 2%;
+    flex-wrap: wrap;
+}
+.mOfertas {
+    margin-top: 30px;
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 1px black;
+}
+.mOfertas img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 767px) {
+    .mensajeInicio {
+        font-size: 30px; 
+        padding-left: 2%; 
+    }
+    .inicio {
+        height: 300px; 
+    }
+    .mensajeOfertas {
+        font-size: 30px; 
+    }
+    .imagenesOfertas {
+        flex-direction: column; 
+    }
+    .mOfertas {
+        margin-top: 15px; 
+        padding: 5px; 
+    }
+}
+
+/* Estilos para pantallas de PC */
+@media screen and (min-width: 768px) {
+    .mensajeInicio {
+        font-size: 50px; 
+    }
+    .inicio {
+        height: 600px; 
+    }
+    .mensajeOfertas {
+        font-size: 50px; 
+    }
+    .imagenesOfertas {
+        flex-direction: row; 
+    }
+    .mOfertas {
+        margin-top: 30px; 
+        padding: 10px; 
+    }
+}
+
+
+/* PIE DE PAGINA */
+footer {
+    background: gray;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.redes {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.imgRedes {
+    width: 40px;
+    height: 40px;
+}
+
+.imgRedes img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.textoFooter {
+    text-align: center;
+}
+
+/* Estilos para pantallas móviles */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 15px 10px; /* Reduce el padding en dispositivos móviles */
+    }
+
+    .redes {
+        flex-direction: row; /* Cambia la disposición a una columna */
+        gap: 15px; /* Reduce el espacio entre los íconos */
+    }
+
+    .imgRedes {
+        width: 35px; /* Ajusta el tamaño de los íconos en móviles */
+        height: 35px;
+    }
+
+    .textoFooter {
+        font-size: 14px; /* Ajusta el tamaño del texto del footer */
+        margin-top: 10px; /* Agrega un pequeño espacio en la parte superior */
+    }
+}
+
+
+/* PAGINA VUELOS */
+.pasajesBaratosv {
+    padding-bottom: 30px;
+}
+
+.masPopularesv {
+    padding-bottom: 50px;
+}
+
+.h1PbaratosV, .h1pPopularesv {
+    margin-top: 10px; 
+    text-align: center;
+    font-size: 32px;
+    color: rgb(1, 1, 160); 
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.imgPBaratosv {
+    padding-top: 40px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px; 
+    justify-items: center;
+}
+
+.imgMPopularesv {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    justify-items: center;
+}
+
+.imgPBaratosv img {
+    width: 90%;
+    max-width: 350px; 
+    height: 100%; 
+    max-height: 300px;
+}
+
+.imgMPopularesv img {
+    width: 100%;
+    max-width: 350px; 
+    height: 100%; 
+    max-height: 300px;
+}
+
+.imgPBaratosv div p, .imgMPopularesv div p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+/* Diseño para pantallas tamaño móvil */
+@media (max-width: 767px) {
+    .imgPBaratosv {
+        grid-template-columns: 1fr; 
+    }
+
+    .imgMPopularesv {
+        grid-template-columns: 1fr; 
+    }
+
+    .h1PbaratosV, .h1pPopularesv {
+        font-size: 24px; 
+    }
+
+    .imgPBaratosv img, .imgMPopularesv img {
+        width: 100%;
+        max-width: 280px; 
+        height: 85%;
+        max-height: 200px; 
+    }
+
+    .imgPBaratosv div p, .imgMPopularesv div p {
+        font-size: 14px; 
+    }
+}
+
+/* Diseño para pantallas tamaño pc */
+@media (min-width: 768px) {
+    .imgPBaratosv {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .imgMPopularesv {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+
+/* PAGINA CRUCEROS */
+
+.cruceros {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+}
+
+.cruceros div {
+    width: 100%; 
+    max-width: 350px;
+    height: 100%;
+    text-align: center;
+}
+
+.cruceros img {
+    width: 100%;
+    height: 90%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.cruceros div p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #020202;
+    text-align: center;
+}
+
+/* Diseño para pantallas tamaño móvil */
+@media (max-width: 767px) {
+    .cruceros {
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto; 
+    }
+
+    .cruceros div {
+        max-width: none; 
+    }
+
+    .cruceros div p {
+        font-size: 14px; 
+    }
+}
+
+/* Diseño para pantallas tamaño pc */
+@media (min-width: 768px) {
+    .cruceros {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .cruceros {
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+            "a1 a2 a3"
+            "a4 a5 a6";
+    }
+
+    .cUruguayBrasil { grid-area: a1; }
+    .cEuropa { grid-area: a2; }
+    .cBuenosAiresRioJaneiro { grid-area: a3; }
+    .cEeUuBahamas { grid-area: a4; }
+    .cBahamas { grid-area: a5; }
+    .cMexicoBahamas { grid-area: a6; }
+}
+
+
+
+/* PAGINA PAQUETES */
+.masBuscadoP{
+    padding-bottom: 30px;
+}
+.masPedidoP{
+    padding-bottom: 50px;
+    
+}
+.h1MasBuscadoP, .h1MasPedidoP { 
+    text-align: center;
+    font-size: 32px;
+    color: rgb(1, 1, 160); 
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.imgMasBuscadoP{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    justify-items: center;
+    
+}
+.imgMasPedidoP{
+    padding-top: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    justify-items: center;
+}
+.imgMasBuscadoP img{
+    width: 100%;
+    max-width: 350px; 
+    height: 90%; 
+    max-height: 300px;
+}
+.imgMasPedidoP img{
+    width: 100%;
+    max-width: 350px; 
+    height: 90%;
+    max-height: 250px; 
+}
+
+.imgMasBuscadoP div p, .imgMasBuscadoP div p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #020202;
+    text-align: center;
+}
+/* CARRUSEL */
+.carousel-item img {
+    width: 10%; 
+    height: 100%; 
+    max-height: 400px;
+    margin: 0 auto; 
+  }
+  
