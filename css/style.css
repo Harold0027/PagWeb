@@ -62,7 +62,6 @@ li a:hover {
 }
 
 /* Estilos para pantallas móviles */
-/* Estilos para pantallas móviles */
 @media screen and (max-width: 768px) {
     header {
         padding: 15px;
@@ -70,21 +69,21 @@ li a:hover {
 
     nav {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        grid-gap: 10px; /* Espacio entre los elementos */
-        align-items: center; /* Alinea el contenido en el centro */
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 10px; 
+        align-items: center; 
     }
 
     .TituloCabecera {
-        font-size: 20px; /* Reduce el tamaño del título */
-        text-align: center; /* Centra el título */
-        grid-column: span 2; /* El título ocupa las dos columnas */
-        margin-bottom: 15px; /* Agrega espacio debajo del título */
+        font-size: 20px; 
+        text-align: center; 
+        grid-column: span 2; 
+        margin-bottom: 15px; 
     }
 
     ul {
         list-style: none;
-        display: contents; /* Para que los elementos del ul no afecten el grid */
+        display: contents; 
         margin: 0;
         padding: 0;
     }
@@ -95,7 +94,7 @@ li a:hover {
     }
 
     li a {
-        font-size: 18px; /* Ajusta el tamaño de fuente para móviles */
+        font-size: 18px; 
     }
 }
 
@@ -230,22 +229,22 @@ footer {
 /* Estilos para pantallas móviles */
 @media screen and (max-width: 768px) {
     footer {
-        padding: 15px 10px; /* Reduce el padding en dispositivos móviles */
+        padding: 15px 10px; 
     }
 
     .redes {
-        flex-direction: row; /* Cambia la disposición a una columna */
-        gap: 15px; /* Reduce el espacio entre los íconos */
+        flex-direction: row; 
+        gap: 15px; 
     }
 
     .imgRedes {
-        width: 35px; /* Ajusta el tamaño de los íconos en móviles */
+        width: 35px; 
         height: 35px;
     }
 
     .textoFooter {
-        font-size: 14px; /* Ajusta el tamaño del texto del footer */
-        margin-top: 10px; /* Agrega un pequeño espacio en la parte superior */
+        font-size: 14px; 
+        margin-top: 10px; 
     }
 }
 
@@ -263,7 +262,7 @@ footer {
     margin-top: 10px; 
     text-align: center;
     font-size: 32px;
-    color: rgb(1, 1, 160); 
+    color: rgb(216, 7, 7); 
     margin-bottom: 30px;
     margin-top: 40px;
 }
@@ -431,7 +430,7 @@ footer {
 .h1MasBuscadoP, .h1MasPedidoP { 
     text-align: center;
     font-size: 32px;
-    color: rgb(1, 1, 160); 
+    color: rgb(243, 27, 27); 
     margin-bottom: 30px;
     margin-top: 40px;
 }
@@ -481,3 +480,13 @@ footer {
     margin: 0 auto; 
   }
   
+/* Animaciones para las imágenes */
+.animated-image {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0.9;
+}
+
+.animated-image:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}

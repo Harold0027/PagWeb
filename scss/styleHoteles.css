@@ -1,0 +1,84 @@
+.masBuscadoH, .masPedidoH {
+  margin: 30px;
+}
+
+.masBuscadoH h1, .masPedidoH h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: rgb(241, 64, 10);
+}
+
+.masBuscadoH .imgHotelesMB, .masBuscadoH .imgHotelesMP, .masPedidoH .imgHotelesMB, .masPedidoH .imgHotelesMP {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.masBuscadoH .imgHotelesMB div, .masBuscadoH .imgHotelesMP div, .masPedidoH .imgHotelesMB div, .masPedidoH .imgHotelesMP div {
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  text-align: center;
+}
+
+.masBuscadoH .imgHotelesMB div img, .masBuscadoH .imgHotelesMP div img, .masPedidoH .imgHotelesMB div img, .masPedidoH .imgHotelesMP div img {
+  width: 100%;
+  height: 90%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.masBuscadoH .imgHotelesMB div p, .masBuscadoH .imgHotelesMP div p, .masPedidoH .imgHotelesMB div p, .masPedidoH .imgHotelesMP div p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #020202;
+}
+
+@media (max-width: 767px) {
+  .imgHotelesMB, .imgHotelesMP {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .imgHotelesMB div, .imgHotelesMP div {
+    max-width: none;
+  }
+  .imgHotelesMB div p, .imgHotelesMP div p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .imgHotelesMB, .imgHotelesMP {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .imgHotelesMB, .imgHotelesMP {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "h1 h2 h3"
+ "h4 h5 h6";
+  }
+  .hLima {
+    grid-area: h1;
+  }
+  .hTrujillo {
+    grid-area: h2;
+  }
+  .hIca {
+    grid-area: h3;
+  }
+  .hParacas {
+    grid-area: h4;
+  }
+  .hUcayali {
+    grid-area: h5;
+  }
+  .hLima2 {
+    grid-area: h6;
+  }
+}

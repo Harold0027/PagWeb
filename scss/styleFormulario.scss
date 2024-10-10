@@ -1,0 +1,136 @@
+// Variables
+$primary-color: #00cc99;
+$secondary-color: #222;
+$text-color: #f5f5f5;
+$border-color: #444;
+$hover-color: darken($primary-color, 10%);
+$focus-shadow: 0 0 5px $primary-color;
+$form-bg-color: $secondary-color;
+$form-padding: 2rem;
+$form-radius: 10px;
+
+// Mixin para sombra
+@mixin box-shadow($x, $y, $blur, $color) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Mixin para botón
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Función para oscurecer un color
+@function darken($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+.contactanos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $form-padding;
+  background-color: $secondary-color;
+  color: $text-color;
+
+  .formulario {
+    flex: 1;
+    padding: $form-padding;
+    background-color: $form-bg-color;
+    border-radius: $form-radius;
+    @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: $text-color;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      label {
+        font-size: 1.2rem;
+        color: lighten($text-color, 30%);
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        border-radius: 5px;
+        border: 1px solid $border-color;
+        background-color: lighten($form-bg-color, 5%);
+        color: $text-color;
+        font-size: 1rem;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: $primary-color;
+        outline: none;
+        @include box-shadow(0, 0, 5px, $primary-color);
+      }
+
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+
+      button {
+        @include button-style($primary-color, #fff);
+      }
+    }
+
+    .iContactanos {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2rem;
+
+      .contact-icon {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: $text-color;
+        transition: color 0.3s ease;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+
+        span {
+          font-size: 1.1rem;
+        }
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  .imgContactanos {
+    flex: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 80%;
+      border-radius: $form-radius;
+      @include box-shadow(0, 4px, 10px, rgba(0, 0, 0, 0.3));
+    }
+  }
+}
