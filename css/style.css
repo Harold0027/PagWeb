@@ -529,6 +529,7 @@ footer {
     margin: 0 auto; 
   }
   
+  
 /* Animaciones para las imágenes */
 .animated-image {
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
