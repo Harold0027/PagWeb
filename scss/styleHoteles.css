@@ -28,7 +28,6 @@
   width: 100%;
   height: 90%;
   max-height: 300px;
-  object-fit: cover;
 }
 
 .masBuscadoH .imgHotelesMB div p, .masBuscadoH .imgHotelesMP div p, .masPedidoH .imgHotelesMB div p, .masPedidoH .imgHotelesMP div p {
@@ -43,7 +42,9 @@
     grid-template-rows: auto;
   }
   .imgHotelesMB div, .imgHotelesMP div {
-    max-width: none;
+    max-width: 70%;
+    max-height: 80%;
+
   }
   .imgHotelesMB div p, .imgHotelesMP div p {
     font-size: 14px;

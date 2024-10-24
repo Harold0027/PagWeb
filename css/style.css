@@ -366,8 +366,8 @@ footer {
 .cruceros img {
     width: 100%;
     height: 90%;
-    max-height: 300px;
-    object-fit: cover;
+    max-height: 200px;
+    object-fit: cover;    
 }
 
 .cruceros div p {
@@ -385,7 +385,10 @@ footer {
     }
 
     .cruceros div {
-        max-width: none; 
+        width: 100%;
+        max-width: 280px; 
+        height: 85%;
+        max-height: 200px; 
     }
 
     .cruceros div p {
@@ -420,13 +423,15 @@ footer {
 
 
 /* PAGINA PAQUETES */
-.masBuscadoP{
+.masBuscadoP {
     padding-bottom: 30px;
 }
-.masPedidoP{
+
+.masPedidoP {
     padding-bottom: 50px;
-    
 }
+
+/* Títulos */
 .h1MasBuscadoP, .h1MasPedidoP { 
     text-align: center;
     font-size: 32px;
@@ -434,7 +439,9 @@ footer {
     margin-bottom: 30px;
     margin-top: 40px;
 }
-.imgMasBuscadoP{
+
+/* Imágenes en pantallas grandes */
+.imgMasBuscadoP {
     padding-top: 40px;
     padding-bottom: 30px;
     text-align: center;
@@ -442,9 +449,9 @@ footer {
     grid-template-columns: repeat(3, 1fr); 
     gap: 10px; 
     justify-items: center;
-    
 }
-.imgMasPedidoP{
+
+.imgMasPedidoP {
     padding-top: 40px;
     padding-bottom: 30px;
     text-align: center;
@@ -453,25 +460,67 @@ footer {
     gap: 20px; 
     justify-items: center;
 }
-.imgMasBuscadoP img{
+
+.imgMasBuscadoP img {
     width: 100%;
     max-width: 350px; 
     height: 90%; 
     max-height: 300px;
 }
-.imgMasPedidoP img{
+
+.imgMasPedidoP img {
     width: 100%;
     max-width: 350px; 
     height: 90%;
     max-height: 250px; 
 }
 
-.imgMasBuscadoP div p, .imgMasBuscadoP div p {
+.imgMasPedidoP div p, .imgMasBuscadoP div p {
     margin-top: 10px;
     font-size: 16px;
     color: #020202;
     text-align: center;
 }
+
+/* Diseño para pantallas móviles */
+@media (max-width: 767px) {
+    .imgMasBuscadoP, .imgMasPedidoP {
+        grid-template-columns: 1fr;
+    }
+
+    .h1MasBuscadoP, .h1MasPedidoP {
+        font-size: 24px;
+    }
+
+    .imgMasBuscadoP img, .imgMasPedidoP img {
+        width: 100%;
+        max-width: 280px;
+        height: 85%;
+        max-height: 200px;
+    }
+
+    .imgMasPedidoP div p, .imgMasBuscadoP div p {
+        font-size: 14px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+
+/* Diseño para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .imgMasBuscadoP {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imgMasPedidoP {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imgMasBuscadoP img, .imgMasPedidoP img {
+        margin-bottom: 20px;
+    }
+}
+
 /* CARRUSEL */
 .carousel-item img {
     width: 10%; 
